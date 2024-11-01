@@ -1,0 +1,133 @@
+:root {
+	--primary-color: #2D3250;
+	--secondary-color: #f3ebf5;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #f3ebf5;
+	
+}
+
+h1 {
+	font-size: 2rem;
+	color: #f3ebf5;
+	text-align: center;
+	padding: 2rem;
+	margin-bottom: 4rem;
+	background-color: var(--primary-color);
+}
+
+h2 {
+	font-size: 1.5rem;
+	color: #2D3250;
+	text-align: center;
+	text-transform: capitalize;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;	
+	position: relative;
+	height: 100vh;
+	background-color: #706c773d;
+}
+
+.container-wrap {
+  position: relative;
+}
+
+.container-wrap:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.25;
+  background-image: url('assets/bocchi.png');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}
+
+.demo-content {
+  position: relative;
+}
+
+.container-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 12rem;
+}
+
+.container-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+
+label {
+	font-size: 1.2rem;
+	color: var(--primary-color);
+	text-transform: capitalize;
+}
+
+input {
+	width: 100%;
+	padding: 0.5rem;
+	font-size: 1.25rem;
+	border: 1px solid var(--primary-color);
+	border-radius: 5px;
+	color: var(--primary-color);
+}
+
+button {
+	padding: 1rem 2rem;
+	font-size: 1rem;
+	border: none;
+	border-radius: 5px;
+	background-color: #2D3250;
+	color: #fff;
+	cursor: pointer;
+	width: 100%;
+	text-transform: uppercase;
+}
+
+button:hover {
+	background-color: #7776B3;
+}
+
+button:active {
+	background-color: #9B86BD;
+}
+
+.result {
+	font-size: 1.2rem;
+	color: var(--primary-color);
+}
+
+.result span {
+	font-weight: bold;
+	font-size: 1.75rem;
+	color: #2D3250;
+}
