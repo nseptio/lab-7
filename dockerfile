@@ -12,4 +12,5 @@ FROM node:18
 WORKDIR /app
 COPY --from=build /app /app
 EXPOSE 80
+EXPOSE 5000
 CMD ["npm", "start"]
