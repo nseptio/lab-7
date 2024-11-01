@@ -1,10 +1,14 @@
-# Stage 1 - build the app
+# Stage 1 - Build the app
 FROM node:18 AS build
 WORKDIR /app
+COPY package*.json ./
+RUN npm install
 COPY . .
-RUN npm install && npm run build
+RUN npm run build
 
-# Stage 2 - serve the app
-FROM nginx:alpine
-COPY --from=build /app/dist /usr/share/nginx/html
+# Stage 2 - Serve the app with Vite's preview mode
+FROM node:18
+WORKDIR /app
+COPY --from=build /app /app
 EXPOSE 80
+CMD ["npm", "run", "preview", "--", "--port", "80"]
